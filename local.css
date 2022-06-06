@@ -1,86 +1,69 @@
-html {
-  width: 100%;
-  height: 100%;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-  display: none;
-}
-
 body {
-  position: absolute;
-  margin: 0;
-  padding: 0;
   background: #fff;
-  width: 100%;
-  height: 100%;
   font-family: Arial;
-}
-
-.width-longer img.banking-image {
-  width: auto;
-  height: 100%;
-}
-
-.height-longer img.banking-image {
-  width: 100%;
-  height: auto;
-}
-
-iframe {
-  display: none!important;
+/*   display: flex; */
 }
 
 
-.content {
+/* CONTENT DIV */
+body > .content {
   margin: auto;
-/*   border: 1px solid black; */
 }
 
-.width-longer .content {
+.width-longer body > .content {
   width: 60%;
 }
 
-.height-longer .content {
+.height-longer body > .content {
   width: 90%;
 }
 
 
-/*  */
-h1 {
-  text-decoration: underline;
-  text-align: center;
+/* CONTENT - SECTION CONTAINER */
+body > .content .section-container {
+  width: -webkit-fill-available;
+  height: fit-content;
 }
 
-/* NEW */
-.banking-info {
+
+/* SECTION CONTAINER - H1 TITLE */
+.content .section-container h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.section-container .banking-info {
   width: 100%;
   height: fit-content;
-/*   border: 1px solid black; */
   display: flex;
   flex-direction: column;
 }
 
-.banking-info p {
+.section-container .banking-info p {
   width: inherit;
   height: fit-content;
   display: inline-flex;
   margin: 10px auto;
 }
 
-.banking-info p span {
+.section-container span {
   width: fit-content;
   height: fit-content;
+}
+
+.width-longer .section-container span {
   font-size: 18px;
 }
 
-.banking-info p .title {
+.height-longer .section-container span {
+  font-size: 14px;
+}
+
+.section-container .banking-info p .title {
   margin: auto auto auto 0px;
   font-weight: bold;
 }
 
-.banking-info p .input {
+.section-container .banking-info p .input {
   margin: auto 0px auto auto;
 }
