@@ -1,13 +1,13 @@
 body {
   background: #fff;
   font-family: Arial;
-/*   display: flex; */
+  display: flex;
+  flex-direction: column;
 }
-
 
 /* CONTENT DIV */
 body > .content {
-  margin: auto;
+  margin: 50px auto auto auto;
 }
 
 .width-longer body > .content {
@@ -23,47 +23,52 @@ body > .content {
 body > .content .section-container {
   width: -webkit-fill-available;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 
-/* SECTION CONTAINER - H1 TITLE */
-.content .section-container h1 {
+/* SECTION CONTAINER - h2 TITLE */
+.content > .section-container h2 {
   text-align: center;
-  text-decoration: underline;
 }
 
-.section-container .banking-info {
+.content > .section-container .banking-info {
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
 }
 
-.section-container .banking-info p {
+.content > .section-container .banking-info p {
   width: inherit;
   height: fit-content;
   display: inline-flex;
   margin: 10px auto;
 }
 
-.section-container span {
+.content > .section-container span {
   width: fit-content;
   height: fit-content;
 }
 
-.width-longer .section-container span {
+.width-longer .content > .section-container span {
   font-size: 18px;
 }
 
-.height-longer .section-container span {
+.height-longer .content > .section-container span {
   font-size: 14px;
 }
 
-.section-container .banking-info p .title {
+.content > .donate.section-container .banking-info p span.title {
   margin: auto auto auto 0px;
   font-weight: bold;
 }
 
-.section-container .banking-info p .input {
+.content > .donate.section-container .banking-info p span.input {
   margin: auto 0px auto auto;
+}
+
+.content > .invest.section-container span {
+  margin: auto;
 }
